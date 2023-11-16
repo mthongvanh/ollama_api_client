@@ -5,14 +5,14 @@ import 'dart:convert';
 import 'package:flutter/foundation.dart';
 import 'package:http/http.dart';
 import 'package:ollama_api_client/ollama_api_client.dart';
-import 'package:ollama_api_client/requests/requests.dart';
 import 'package:ollama_api_client/responses/ollama_response.dart';
-
-import 'errors/errors.dart';
 
 export './params/params.dart';
 export './responses/responses.dart';
 export './api_result.dart';
+export './entities/entities.dart';
+export './requests/requests.dart';
+export './errors/errors.dart';
 
 /// Makes HTTP requests to the Ollama API server.
 ///

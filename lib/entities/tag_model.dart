@@ -33,13 +33,14 @@ class TagModel {
     );
   }
 
-  toJson() {
+  Map<String, dynamic> toJson() {
     Map<String, dynamic> jsonRepresentation = {
       'name': name,
       'modified_at': modifiedAt,
       'size': size,
       'digest': digest,
     };
-    return jsonRepresentation.removeWhere((key, value) => value == null);
+    jsonRepresentation.removeWhere((key, value) => value == null);
+    return jsonRepresentation;
   }
 }

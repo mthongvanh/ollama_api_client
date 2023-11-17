@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:ollama_api_client/ollama_api_client.dart';
-import 'package:ollama_api_client/requests/requests.dart';
 
 void main() {
   runApp(const MainApp());

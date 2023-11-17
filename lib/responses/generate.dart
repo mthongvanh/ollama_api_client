@@ -5,9 +5,9 @@ import 'ollama_response.dart';
 /// AI response generated in reply to a user prompt
 ///
 /// #### Response
-/// 
-/// If stream is set to false, the response will be a single JSON object. 
-/// 
+///
+/// If stream is set to false, the response will be a single JSON object.
+///
 /// - `total_duration`: time spent generating the response
 /// - `load_duration`: time spent in nanoseconds loading the model
 /// - `sample_count`: number of samples generated
@@ -58,13 +58,15 @@ class GenerateResponse extends OllamaResponse {
       jsonMap['created_at'],
       jsonMap['response'],
       jsonMap['done'],
-      jsonMap['context'] is List<int> ? jsonMap['context'] : null,
-      jsonMap['totalDuration'],
-      jsonMap['loadDuration'],
-      jsonMap['promptEvalCount'],
-      jsonMap['promptEvalDuration'],
-      jsonMap['evalCount'],
-      jsonMap['evalDuration'],
+      jsonMap['context'] is List<dynamic>
+          ? List<int>.from(jsonMap['context'])
+          : null,
+      jsonMap['total_duration'],
+      jsonMap['load_duration'],
+      jsonMap['prompt_eval_count'],
+      jsonMap['prompt_eval_duration'],
+      jsonMap['eval_count'],
+      jsonMap['eval_duration'],
       response,
     );
   }

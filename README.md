@@ -4,6 +4,8 @@ A collection of classes to make Ollama API server calls for inference and model 
 
 This api client requires a local or remote machine to have Ollama installed and the API server running. It was developed with Flutter 3.13.2 and Dart 3.1.0 on macOS 14.0.
 
+Currently used in one of my other personal projects [amallo](https://github.com/mthongvanh/amallo)
+
 ## Usage
 
 ```dart
